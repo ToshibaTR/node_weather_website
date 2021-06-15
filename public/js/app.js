@@ -1,5 +1,3 @@
-console.log('running from a static file')
-
 const weatherForm = document.querySelector('form')
 const searchInput = document.querySelector('input')
 const messageOne = document.querySelector('#message_1')
