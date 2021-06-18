@@ -8,7 +8,7 @@ const forecast = require('./utils/forecast')
 const publicDirPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../Templates/views')
 const partialsPath = path.join(__dirname,'../Templates/partials')
-
+const port = process.env.PORT || 4000
 /*
      geocode(address, (error, { latitude, longitude, location }) => {
         if (error) {
@@ -91,4 +91,4 @@ app.get('/products', (req,res)=>
 })
 
 console.log('__dirname',__dirname)
-app.listen(4000,()=>{console.log('listener is up and running at port 4000')})
+app.listen(port,()=>{console.log('listener is up and running at port 4000')})
