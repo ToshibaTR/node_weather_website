@@ -3,7 +3,7 @@ const forecast = (lat,long,callback) =>
 {
     
     const url = 'http://api.weatherstack.com/current?access_key=d3f1b2712109d9ebfefc2133cd374028&query='+lat+','+long+'&units=f'
- 
+    
     request({url , json:true}, (error,{body}) =>
     {
         debugger
@@ -18,7 +18,7 @@ const forecast = (lat,long,callback) =>
         }
         else
         {
-            callback(undefined, body.current.weather_descriptions[0]+'.It feels like'+ body.current.feelslike+'Temperature is'+ body.current.temperature)
+            callback(undefined, 'Current Forecast is'+body.current.weather_descriptions[0]+'.It feels like'+ body.current.feelslike+'Temperature is'+ body.current.temperature)
         }
     })
 }   
