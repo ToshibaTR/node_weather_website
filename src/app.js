@@ -9,22 +9,8 @@ const publicDirPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../Templates/views')
 const partialsPath = path.join(__dirname,'../Templates/partials')
 const port = process.env.PORT || 4000
-/*
-     geocode(address, (error, { latitude, longitude, location }) => {
-        if (error) {
-            return console.log(error)
-        }
 
-        forecast(latitude, longitude, (error, forecastData) => {
-            if (error) {
-                return console.log(error)
-            }
 
-            console.log(location)
-            console.log(forecastData)
-        })
-    })
-*/
 
 const app = express()
 app.set('view engine','hbs')
